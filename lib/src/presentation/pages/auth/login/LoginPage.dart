@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/src/presentation/widgets/DefaultTextFIeld.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatelessWidget {
@@ -44,42 +45,24 @@ class Loginpage extends StatelessWidget {
 
                   Container(
                     margin: EdgeInsets.only(left: 25, right: 25),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        label: Text(
-                          'Correo electronico',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        prefixIcon: Icon(Icons.email, color: Colors.white),
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
+                    child: DefaultTextField(
+                      label: 'Correo electronico',
+                      icon: Icons.email,
+                      onChanged: (text) {
+                        print('Text:${text}');
+                      },
                     ),
                   ),
 
                   Container(
                     margin: EdgeInsets.only(left: 25, right: 25),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        label: Text(
-                          'Contraseña',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        prefixIcon: Icon(Icons.lock, color: Colors.white),
-
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: const Color.fromRGBO(255, 255, 255, 1),
-                          ),
-                        ),
-                      ),
+                    child: DefaultTextField(
+                      label: 'Contraseña',
+                      icon: Icons.email,
+                      onChanged: (text) {
+                        print('Text:${text}');
+                      },
+                      obscureText: true,
                     ),
                   ),
 
