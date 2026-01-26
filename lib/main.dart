@@ -1,4 +1,5 @@
 import 'package:ecommerce_flutter/src/presentation/pages/auth/login/LoginPage.dart';
+import 'package:ecommerce_flutter/src/presentation/pages/auth/register/RegisterPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       initialRoute: 'login',
-      routes: {'login': (BuildContext context) => Loginpage()},
+      routes: {
+        'login': (BuildContext context) => Loginpage(),
+        'register': (BuildContext context) => Registerpage(),
+      },
     );
   }
 }

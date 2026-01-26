@@ -111,7 +111,9 @@ class Loginpage extends StatelessWidget {
                     ),
                     height: 55,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'register');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                       ),
